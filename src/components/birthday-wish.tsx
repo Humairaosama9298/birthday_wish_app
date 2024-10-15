@@ -19,8 +19,8 @@ type ConfettiProps = {
 const DynamicConfetti = dynamic(() => import('react-confetti'), { ssr: false })
 
 // Define color arrays for candles, balloons, and confetti
-const candleColors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A', '#98D8C8']
-const balloonColors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A', '#98D8C8']
+const candleColors = ['#e7a60e', '#e7a60e ', '#e7a60e', '#e7a60e', '#e7a60e']
+const balloonColors = ['#e7a60e', '#e7a60e  ', '#e7a60e', '#e7a60e', '#e7a60e']
 const confettiColors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A', '#98D8C8', '#F7DC6F', '#BB8FCE']
 
 export default function BirthdayWish() {
@@ -81,21 +81,22 @@ export default function BirthdayWish() {
 
   return (
     // Main container
-    <div className="min-h-screen bg-pink-300 flex items-center justify-center p-4">
+    <div className="bg-cover bg-no-repeat h-screen w-full min-h-screen bg-[url('/images/blue.jpg')] flex items-center justify-center p-4">
+
       {/* Animated wrapper for the card */}
       <motion.div
         initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
+        animate={{ scale: 1, opacity: 2 }}
         transition={{ duration: 0.5 }}
         className="w-full max-w-md"
       >
         {/* Birthday card */}
-        <Card className="mx-auto bg-pink-300 overflow-hidden transition-all duration-400 ease-in-out shadow-xl hover:shadow-2xl border-transparent rounded-2xl">
+        <Card className=" mx-auto  bg-opacity-75 backdrop-filter backdrop-blur-xl  overflow-hidden transition-all duration-400 ease-in-out shadow-xl hover:shadow-2xl border-transparent rounded-2xl">
           {/* Card header with birthday message */}
           <CardHeader className="text-center">
-            <CardTitle className="text-4xl font-bold text-amber-600">Happy 30th Birthday!</CardTitle>
-            <CardDescription className="p-6 text-2xl font-semibold text-black">OSAMA SHEIKH</CardDescription>
-            <p className="text-lg text-amber-600">December 30th</p>
+            <CardTitle className="text-4xl font-bold text-[#0D92F4]">Happy 30th Birthday!</CardTitle>
+            <CardDescription className="p-6 text-2xl font-semibold text-[#e7a60e]">OSAMA SHEIKH</CardDescription>
+            <p className="text-lg text-[#0D92F4]">December 30th</p>
           </CardHeader>
           {/* Card content with candles and balloons */}
           <CardContent className="space-y-6 text-center">
@@ -134,7 +135,7 @@ export default function BirthdayWish() {
             </div>
             {/* Balloons section */}
             <div>
-              <h3 className="text-lg font-semibold text-amber-600 mb-2">Pop the balloons:</h3>
+              <h3 className="text-lg font-semibold text-[#0D92F4] mb-2">Pop the balloons:</h3>
               <div className="flex justify-center space-x-2">
                 {/* Map through balloons */}
                 {[...Array(totalBalloons)].map((_, index) => (
@@ -158,7 +159,7 @@ export default function BirthdayWish() {
           {/* Card footer with celebrate button */}
           <CardFooter className="flex justify-center">
             <Button 
-              className="bg-amber-600 rounded-xl shadow-2xl text-white hover:bg-white  hover:shadow-2xl hover:text-black transition-all duration-300"
+              className="bg-[#0D92F4] rounded-xl shadow-2xl text-white hover:bg-white  hover:shadow-2xl hover:text-black transition-all duration-300"
               onClick={celebrate}
               disabled={celebrating}
             >
