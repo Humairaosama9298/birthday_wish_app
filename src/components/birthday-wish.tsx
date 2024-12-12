@@ -94,9 +94,9 @@ export default function BirthdayWish() {
         <Card className=" mx-auto  bg-opacity-75 backdrop-filter backdrop-blur-xl  overflow-hidden transition-all duration-400 ease-in-out shadow-xl hover:shadow-2xl border-transparent rounded-2xl">
           {/* Card header with birthday message */}
           <CardHeader className="text-center">
-            <CardTitle className="text-4xl font-bold text-[#0D92F4]">Happy 30th Birthday!</CardTitle>
-            <CardDescription className="p-6 text-2xl font-semibold text-[#e7a60e]">OSAMA SHEIKH</CardDescription>
-            <p className="text-lg text-[#0D92F4]">December 30th</p>
+            <CardTitle className="text-4xl font-bold text-[#0D92F4]">Happy 5th Birthday!</CardTitle>
+            <CardDescription className="p-6 text-2xl font-semibold text-[#e7a60e]">HOORAIN RIZWAN</CardDescription>
+            <p className="text-lg text-[#0D92F4]">December 12th</p>
           </CardHeader>
           {/* Card content with candles and balloons */}
           <CardContent className="space-y-6 text-center">
